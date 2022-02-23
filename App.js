@@ -5,34 +5,46 @@ function App() {
   const [nome, setNome] = useState('Seu Nome Completo');
   const [idade, setIdade] = useState('Com  Sua idade atual');
 
+  const styles = StyleSheet.create({
+    // criação de estilo do sistema
+    area: {
+      marginTop: 50,
+      margin: 18,
+      flex:1,
+     
+    },
+    titulo: {
+      fontSize: 20,
+      color: '#FF6347',
+    },
+    subtitulo: {
+      fontStyle: 'italic',
+      fontFamily: 'verdana',
+      fontSize: 22,
+    },
+    font: {
+      fontSize: 19,
+      textAlign: 'center',
+    },
+    imagem:{
+      width :350,
+      marginTop:350,
+      height:20
+    }
+  });
+
   function entrar(nome, idade) {
     setNome(nome);
     setIdade(idade);
   }
   return (
-    <View>
-      <Text
-        style={{
-          margin: 25,
-          textAlign: 'center',
-          color: '#FF6347',
-          fontSize: 29,
-        }}>
-        Julia Maria
-      </Text>
-      <Text style={{margin: 25, fontSize: 29, textAlign: 'center'}}>
+    <View style={[styles.area]}>
+      <Text style={[styles.titulo, styles.font]}>Julia Maria</Text>
+      <Text style={[styles.titulo, styles.font]}>
         Mas, eu prefiro Maria Julia
       </Text>
 
-      <Text
-        style={{
-          color: '#6959CD',
-          fontSize: 25,
-          margin: 15,
-          textAlign: 'center',
-        }}>
-        Julia do pastelzinho
-      </Text>
+      <Text style={[styles.subtitulo, styles.font]}> Tia Julia do Estagio</Text>
       <Logo
         largura={350}
         altura={350}
@@ -40,8 +52,8 @@ function App() {
         nomeLabel="React Logo"
       />
 
-      <Text style={{fontSize: 19}}> {nome} </Text>
-      <Text style={{fontSize: 17}}> {idade} </Text>
+      <Text style={[styles.subtitulo, styles.font]}> {nome} </Text>
+      <Text style={[styles.subtitulo, styles.font]}> {idade} </Text>
 
       <Button
         style={{margin: 456}}
@@ -52,7 +64,6 @@ function App() {
     </View>
   );
 }
-
 export default App;
 
 function Logo(props) {
