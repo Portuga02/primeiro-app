@@ -31,7 +31,7 @@ function App() {
           margin: 15,
           textAlign: 'center',
         }}>
-        Julia do pastelzinho
+        Láysa rosa do carmelo
       </Text>
       <Logo
         largura={350}
